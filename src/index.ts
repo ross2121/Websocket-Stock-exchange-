@@ -1,10 +1,11 @@
 import { WebSocketServer } from "ws";
 import { UserManager } from "./UserManager";
 import {createClient} from "redis"
-
+import dotenv from "dotenv"
+dotenv.config();
 async function redis(){
     const client=createClient({
-    url:"rediss://red-cumrnjd6l47c7397qhf0:9ybkrbUwo8EZJraRqJ15mAINVUSNmEWc@oregon-redis.render.com:6379"
+    url:process.env.REDIS_URL
 });
 try{await client.connect();
     console.log("connect to redddis");
