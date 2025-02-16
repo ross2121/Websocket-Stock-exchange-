@@ -3,7 +3,7 @@ import { UserManager } from "./UserManager";
 import dotenv from "dotenv"
 dotenv.config();
 export class SubscriptionManager{
-    private redisClient:RedisClientType;
+         private redisClient:RedisClientType;
     private subscription:Map<string,string[]>=new Map();
     private reverseSubscription:Map<string,string[]>=new Map();
     private static instance:SubscriptionManager
