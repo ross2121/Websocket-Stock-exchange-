@@ -33,7 +33,7 @@ wss.on("connection", (ws) => {
     ws.on("close", () => console.log("Client Disconnected"));
 });
 
-const PORT = process.env.PORT || 443;
+const PORT =3001;
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
