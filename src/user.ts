@@ -10,8 +10,7 @@ export class User{
         this.ws=ws;
         this.addListneres()
     }
-     emit(message:string){
-        console.log("message");
+     emit(message:outgoingMessage){
         this.ws.send(JSON.stringify(message));
     }
     private subscriptions:string[]=[]
