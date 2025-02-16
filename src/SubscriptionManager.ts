@@ -1,6 +1,7 @@
 import { RedisClientType,createClient } from "redis";
 import { UserManager } from "./UserManager";
-
+import dotenv from "dotenv"
+dotenv.config();
 export class SubscriptionManager{
     private redisClient:RedisClientType;
     private subscription:Map<string,string[]>=new Map();
